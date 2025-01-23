@@ -1,11 +1,12 @@
 #include <iostream>
 
-int multiples(int n){
-    return ((n*(999/n)*(999/n+1))/2);
+int multiples(int n,int limita){
+    return ((n*(((limita-1)/n)*((limita-1))/n+1))/2);
 }
 
 int main(){
     int limita;
-    std::cout<<multiples(3)+multiples(5)-multiples(15)<<std::endl;
+    std::cin>>limita;
+    std::cout<<multiples(3,limita)+multiples(5,limita)-multiples(15,limita)<<std::endl;
     return 0;
 }
